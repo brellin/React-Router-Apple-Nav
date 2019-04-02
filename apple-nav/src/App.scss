@@ -40,7 +40,7 @@
             display: flex;
             justify-content: space-between;
             background: whitesmoke;
-            padding: 10px 25%;
+            padding: 0 25%;
 
             a {
                 display: flex;
@@ -51,6 +51,7 @@
                 color: black;
                 text-decoration: none;
                 margin: 0 15px;
+                padding: 10px 0;
 
                 object {
                     width: 100%;
