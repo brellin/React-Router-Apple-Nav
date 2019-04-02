@@ -56,9 +56,11 @@ class App extends Component {
           className="switch-wrapper"
         >
           <Route exact path='/' component={Home} />
-          <Route path='/:name' render={props => (
-            <Page name={this.state.links.filter(arr => arr.name === props.match.params.name)} />
-          )} />
+          <Route
+            path='/:name'
+            render={props => (
+              <Page name={this.state.links.filter(arr => arr.name === props.match.params.name)[0]} />
+            )} />
         </AnimatedSwitch>
       </div>
     );

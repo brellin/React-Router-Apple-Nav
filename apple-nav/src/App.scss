@@ -36,6 +36,28 @@
             }
         }
 
+        @keyframes grow {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+
+            to {
+                height: 100px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes disguise {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         .sub {
             display: flex;
             justify-content: space-between;
@@ -52,16 +74,13 @@
                 text-decoration: none;
                 margin: 0 15px;
                 padding: 10px 0;
+                animation: grow 2s ease-in-out forwards;
 
                 object {
                     min-width: 40px;
                     width: 100%;
                     height: 60px;
-                    color: #111;
-
-                    svg g {
-                        fill: #111;
-                    }
+                    animation: disguise 4s ease-in-out forwards;
                 }
 
                 span {

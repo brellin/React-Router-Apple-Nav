@@ -1,4 +1,10 @@
 .page {
-    margin: 0 auto;
-    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        color: black;
+        font-size: 3rem;
+    }
 }
