@@ -13,12 +13,16 @@ class App extends Component {
     super(props);
     this.state = {
       links: data,
-      sub: []
+      sub: [],
+      subName: ''
     }
   }
 
-  subLinkCheck = sub => {
-    this.setState({ sub: sub === undefined || null ? [] : sub });
+  subLinkCheck = (sub, subName) => {
+    this.setState({
+      sub: sub === undefined || null ? [] : sub,
+      subName: subName
+    });
   }
 
   render() {
@@ -33,6 +37,7 @@ class App extends Component {
               <Links
                 name={link.name}
                 key={id}
+                subName={this.state.subName}
                 subLinkCheck={this.subLinkCheck}
                 subLinks={link.subLinks}
               />
